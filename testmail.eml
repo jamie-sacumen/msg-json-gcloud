@@ -1,0 +1,152 @@
+Delivered-To: jamierhmn@gmail.com
+Received: by 2002:a05:6214:7e3:0:0:0:0 with SMTP id bp3csp358268qvb;
+        Mon, 7 Jun 2021 23:16:11 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyve/CO8wHfSMouhcvue2MvwioDPbtvlgSPD+2zf9lKRhTITUgXpq9siUphoGNqMreWeJkr
+X-Received: by 2002:a17:903:304e:b029:112:6cc2:69ab with SMTP id u14-20020a170903304eb02901126cc269abmr9067159pla.72.1623132971244;
+        Mon, 07 Jun 2021 23:16:11 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1623132971; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=K7jtEFO7t0lXO/SGLM8py9WP0GgAALv9FWvC5B4KCjV3JL6+wFTOhEjdgkLm03ZYFt
+         QpBoRjQ9RaUIX9lHmTIvI4X1CL7Z8+eM04EiyWANOVokA5f4qeRok9BXH8kBSj6aX1GY
+         jjgs03CK/9bhbtCdsXPzkgqKeh9yv889+ymlJjAAisfucxsTIgGmsi7pBhg3dJz8zAbu
+         KhF1P0SMY80Dq9UCSQ336WcPRosquo0QhjysQG1jlmo/pwH0/Jyx5vZ0wWfqoalyc3BY
+         Jk1Eap405lT84zZ+/3GEPJ7KzVomHOKOIO5nbcU0BNmhkbFwvJHqwGO7yFv9AOSYxiGe
+         KdBA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from:dkim-signature;
+        bh=5M5F1AZkooxbedy0lB+bZ+yhF2W7ExYO/qqaOxBMSd0=;
+        b=K4SqiwOnjf/Vbg7rdmNjdVF0FijrfR52qH0SP+/Dmfvi6hnzzdROqIa6PPwt5DHyXd
+         BoZ1Y+ixdZnRdN5JAVv5Onx3Rx2WiLR6odVXDMUGvuq5TScG62Z90tmEZD2OwmxWzboJ
+         YpwBklMRIiBXOow8dPgPCELl+kKqSoxIBlj7oN9Y4aut0YRiTr0MrBiJvnDQAEut4aOV
+         inQ0izae6lN6UuZEk07J5r0+IPBXsxq/34pxKxIWQsHBF6baI4nlBN7vfs0L8UUIBf/h
+         TFU7xKh1ezBZZJfUnMppPOG3cAetcynHYZxz6phzHcPqsZ4IJSJ3BdwA3PqOGK/6gHqZ
+         ma6Q==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=EWDogzi7;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of jamiear_sacumen@outlook.com designates 40.92.255.37 as permitted sender) smtp.mailfrom=jamiear_sacumen@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+Return-Path: <jamiear_sacumen@outlook.com>
+Received: from APC01-HK2-obe.outbound.protection.outlook.com (mail-oln040092255037.outbound.protection.outlook.com. [40.92.255.37])
+        by mx.google.com with ESMTPS id 18si8373039pgq.5.2021.06.07.23.16.10
+        for <jamierhmn@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Jun 2021 23:16:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jamiear_sacumen@outlook.com designates 40.92.255.37 as permitted sender) client-ip=40.92.255.37;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=EWDogzi7;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of jamiear_sacumen@outlook.com designates 40.92.255.37 as permitted sender) smtp.mailfrom=jamiear_sacumen@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=DAPELe29q2+jtdFspvq2GXcigXll46GZY0o6pwag7M5hcxlNr1thGItJBgWDEQchBJSRc88nutbFPuurHDoNQ28JQ//AAAy7ZF9Zr1ZS1J3SnZ9MLjwKN0y6dMRuzMUT6yRu1E1V5Fn2ViZAN9eCiDUpshjx39wuqrSuDj1nnbFrKzSHDXf2M79G/T2cHapugPkmdtdAtzSYz9yx12Q6NTrs92XKcF0/+wFrYCKnG4fwx0EZDSAx1NiyqLYXlaID1C3Dlex5x3bD+j26uhXcHK9TyB9bDvYhI/Kj4mZCQZt0vqa1Xp2b41MvYkTZ+CpIDHGKUNWJHQmQfVa4PULa+A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=5M5F1AZkooxbedy0lB+bZ+yhF2W7ExYO/qqaOxBMSd0=;
+ b=kU3EAsCqSkIV7C5mCFCkToaSbIimInshSV3H2aTfXd8fg0dDoG5/O9NbqebGp+hvPABCwd+T5IhGPV50E7ZZYMeZ04qXYgjnso741FwDRjWPML7HYGNNCAZXKkQbGcttyF3kiq4PLMvPqfSn1x6zeqMEGGDL4NTTqAzPAd6zrkZQTNh4tmHIhfJhynneH8LfV7IF0n88kd6Y42U4jj9a1GOreuCs6EDRWaAieANmiF2anQ5lpoM6Hst4LIkwH8xVaRND9YIRLgM0mAuTlG3qLNCQj6UHDBqVjLpi8ZLwDLM3tNkPxbQO5a5Zf4VPwWZyD29+n+aO9+Y+JF1uXxsekw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=5M5F1AZkooxbedy0lB+bZ+yhF2W7ExYO/qqaOxBMSd0=;
+ b=EWDogzi7A+OYzY7XABHR2PdiSUkvtbLK6vduVB7XNLrwuqWNjtvuBJi+0Pn/v1yuhnpu26r58clx3nvl9rwBIebrfa3xiRzo9wSYzC2UUsXPsH6UkSv95LsXaH3zjAwdqVOlldvqqYDl57JMJde9DtXzR4jDlQhQB9wj2enc9DfeN5zyRw3IvD8iDHHvl0C7sBMH60f17lK2LcVX8vKECTLUilLZJT9t5zZbUOaEXomvmQ8+EY7+4aYCXVn+XHHfVOOWwA61zHL4VJqUKgqyZHSas4M17H5Xy8tKL0eCvlmHwBX9xIduMcwhHGigdH5HPI34cNYhTdAwTsltGdPvLA==
+Received: from SG2PR01MB3207.apcprd01.prod.exchangelabs.com
+ (2603:1096:4:82::12) by SG2PR01MB2096.apcprd01.prod.exchangelabs.com
+ (2603:1096:3:1e::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4195.27; Tue, 8 Jun
+ 2021 06:16:09 +0000
+Received: from SG2PR01MB3207.apcprd01.prod.exchangelabs.com
+ ([fe80::d418:b13f:d7c9:6dda]) by SG2PR01MB3207.apcprd01.prod.exchangelabs.com
+ ([fe80::d418:b13f:d7c9:6dda%5]) with mapi id 15.20.4195.030; Tue, 8 Jun 2021
+ 06:16:09 +0000
+From: Jamie Ashikur Rahman <jamiear_sacumen@outlook.com>
+To: "jamierhmn@gmail.com" <jamierhmn@gmail.com>
+Subject: test  mail for program 
+Thread-Topic: test  mail for program 
+Thread-Index: AQHXXC1gz1w2bahxSU+fOOWnpzhlgw==
+Date: Tue, 8 Jun 2021 06:16:09 +0000
+Message-ID:
+ <SG2PR01MB32072EC037CEA663CAEC3BF698379@SG2PR01MB3207.apcprd01.prod.exchangelabs.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-tmn: [zhiCE51P/1qtOnBHBTb60BqAPCmIMwcZkwIlKsDanYU=]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 7747477f-29a9-433b-1818-08d92a44e88f
+x-ms-traffictypediagnostic: SG2PR01MB2096:
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ 24LtBmbjGKyLM3ZJ7J2Jlr8X7WC5xAjLxR+GB2HZnsPybRG6oc1IqvogaRipZl2y/FnMIRAVOH0DNxnU9AzEwRfMzcdYpRNUUlHiksvmWLxfESBZDfS0TxkYDWLN8YLVDtAs9TZj66TEhafx7LUrdZW/3RtNPvkuAAga8g4QNgXcO9tlhYZKCXv7miIAiTZncoblhKgNIrpUQiZvUjCNnnptIl1+xq4cs1tU67VwdlRQW3ttJahttZrRhG59cTHiWwdKMWZ8PHFcH6KdkpdUSwpTvjSfo9mo91r6rjqPLGhERTc9voUzm6t1DEeLrXlQULI2YDM6rVDAAXHNC+rZyflHhFsfdFo8mQwPQtr+RcIqUaWdUb0DHb+HmW/eR8Pl
+x-ms-exchange-antispam-messagedata:
+ eayQQ0vAix7UJb10eEySl7++9Ck9/DDm+MxuNujosDFWgTc49EIP1MBUYU0qQXxJPPbMQ7g0yBJGpA8VyzGV81cfMbWq01Fz1u8SUZJkfCbfLWccu1WGwoanP7wO0SRgtD5Fo5y0M62163zvJ54wIA==
+x-ms-exchange-transport-forked: True
+Content-Type: multipart/alternative;
+	boundary="_000_SG2PR01MB32072EC037CEA663CAEC3BF698379SG2PR01MB3207apcp_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: SG2PR01MB3207.apcprd01.prod.exchangelabs.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7747477f-29a9-433b-1818-08d92a44e88f
+X-MS-Exchange-CrossTenant-originalarrivaltime: 08 Jun 2021 06:16:09.4482
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SG2PR01MB2096
+
+--_000_SG2PR01MB32072EC037CEA663CAEC3BF698379SG2PR01MB3207apcp_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+SGkgYWxsLA0KDQpUaGlzIGlzIHRlc3QgbWFpbCB0byBjb252ZXJ0IG1zZyBmaWxlIGZvcm1hdCB0
+byBqc29uIGZvcm1hdCAuDQoNClNvbWUgb2YgdGhlIHNraWxscyBpbiBJVCBpbmR1c3RyeSDwn5iC
+DQpQeXRob24samF2YSAsQysrDQoNCkNsb3VkIGlzIG5vdyBhIGRheXMgaW4gYm9vbS4NCkFXUyxH
+Y2xvdWQgYW5kIEF6dXJlIGluIGRvbWluYW50DQoNClRoYW5rcw0KSmFtaWUNClNhY3VtZW4NCg==
+
+--_000_SG2PR01MB32072EC037CEA663CAEC3BF698379SG2PR01MB3207apcp_
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
+dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyIgc3R5bGU9
+ImRpc3BsYXk6bm9uZTsiPiBQIHttYXJnaW4tdG9wOjA7bWFyZ2luLWJvdHRvbTowO30gPC9zdHls
+ZT4NCjwvaGVhZD4NCjxib2R5IGRpcj0ibHRyIj4NCjxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBD
+YWxpYnJpLCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEycHQ7IGNv
+bG9yOiByZ2IoMCwgMCwgMCk7Ij4NCkhpIGFsbCw8L2Rpdj4NCjxkaXYgc3R5bGU9ImZvbnQtZmFt
+aWx5OiBDYWxpYnJpLCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEy
+cHQ7IGNvbG9yOiByZ2IoMCwgMCwgMCk7Ij4NCjxicj4NCjwvZGl2Pg0KPGRpdiBzdHlsZT0iZm9u
+dC1mYW1pbHk6IENhbGlicmksIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IGZvbnQtc2l6
+ZTogMTJwdDsgY29sb3I6IHJnYigwLCAwLCAwKTsiPg0KVGhpcyBpcyB0ZXN0IG1haWwgdG8gY29u
+dmVydCBtc2cgZmlsZSBmb3JtYXQgdG8ganNvbiBmb3JtYXQgLjwvZGl2Pg0KPGRpdiBzdHlsZT0i
+Zm9udC1mYW1pbHk6IENhbGlicmksIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IGZvbnQt
+c2l6ZTogMTJwdDsgY29sb3I6IHJnYigwLCAwLCAwKTsiPg0KPGJyPg0KPC9kaXY+DQo8ZGl2IHN0
+eWxlPSJmb250LWZhbWlseTogQ2FsaWJyaSwgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjsg
+Zm9udC1zaXplOiAxMnB0OyBjb2xvcjogcmdiKDAsIDAsIDApOyI+DQpTb21lIG9mIHRoZSBza2ls
+bHMgaW4gSVQgaW5kdXN0cnkgPHNwYW4gaWQ9IvCfmIIiPvCfmII8L3NwYW4+PC9kaXY+DQo8ZGl2
+IHN0eWxlPSJmb250LWZhbWlseTogQ2FsaWJyaSwgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJp
+ZjsgZm9udC1zaXplOiAxMnB0OyBjb2xvcjogcmdiKDAsIDAsIDApOyI+DQo8c3Bhbj5QeXRob24s
+amF2YSAsQysrPC9zcGFuPjwvZGl2Pg0KPGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6IENhbGlicmks
+IEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTJwdDsgY29sb3I6IHJn
+YigwLCAwLCAwKTsiPg0KPHNwYW4+PGJyPg0KPC9zcGFuPjwvZGl2Pg0KPGRpdiBzdHlsZT0iZm9u
+dC1mYW1pbHk6IENhbGlicmksIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IGZvbnQtc2l6
+ZTogMTJwdDsgY29sb3I6IHJnYigwLCAwLCAwKTsiPg0KPHNwYW4+Q2xvdWQgaXMgbm93IGEgZGF5
+cyBpbiBib29tLjwvc3Bhbj48L2Rpdj4NCjxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBDYWxpYnJp
+LCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEycHQ7IGNvbG9yOiBy
+Z2IoMCwgMCwgMCk7Ij4NCjxzcGFuPkFXUyxHY2xvdWQgYW5kIEF6dXJlIGluIGRvbWluYW50PC9z
+cGFuPjwvZGl2Pg0KPGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6IENhbGlicmksIEFyaWFsLCBIZWx2
+ZXRpY2EsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTJwdDsgY29sb3I6IHJnYigwLCAwLCAwKTsi
+Pg0KPHNwYW4+PGJyPg0KPC9zcGFuPjwvZGl2Pg0KPGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6IENh
+bGlicmksIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTJwdDsgY29s
+b3I6IHJnYigwLCAwLCAwKTsiPg0KPHNwYW4+VGhhbmtzPC9zcGFuPjwvZGl2Pg0KPGRpdiBzdHls
+ZT0iZm9udC1mYW1pbHk6IENhbGlicmksIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IGZv
+bnQtc2l6ZTogMTJwdDsgY29sb3I6IHJnYigwLCAwLCAwKTsiPg0KPHNwYW4+SmFtaWUmbmJzcDs8
+L3NwYW4+PC9kaXY+DQo8ZGl2IHN0eWxlPSJmb250LWZhbWlseTogQ2FsaWJyaSwgQXJpYWwsIEhl
+bHZldGljYSwgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxMnB0OyBjb2xvcjogcmdiKDAsIDAsIDAp
+OyI+DQo8c3Bhbj5TYWN1bWVuPC9zcGFuPjwvZGl2Pg0KPC9ib2R5Pg0KPC9odG1sPg0K
+
+--_000_SG2PR01MB32072EC037CEA663CAEC3BF698379SG2PR01MB3207apcp_--
